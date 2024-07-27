@@ -1,42 +1,124 @@
-#homepage {
-    background: linear-gradient(45deg, rgba(211,56,68,1) 0%, rgba(80,80,194,1) 50%, rgba(49,44,240,1) 100%);
-    width: 100%;
-    height: 100vh;
+:root {
+    --primary-color: #194680;
+    --secondary-color: #d4e3f7;
+    --accent-color: #ff3333;
 }
 
-.links {
-    width: 100%;
-    height: 3rem;
-    background-color: rgb(35, 14, 154);
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
+/* Typography */
 
-.link {
-    margin-right: 1rem;
-    color: white;
-}
-
-.logo {
-    display: flex;
-}
-
-.my-name {
-    font-size: small;
-    margin-right: auto;
-    margin-left: 1rem;
-
-}
-
-.webTitle {
-    width: 25rem;
-    height: 5rem;
-    background-color: gray;
+h1, h2, h3 {
+    color: #fff;
 }
 
 .title {
-    margin: 0px;
-    color: white;
+    text-align: center;
+    width: 100vw;
+}
+
+.page--title {
+    margin: 1.5rem 5rem;
+    color: var(--primary-color);
+    text-shadow: 0px 0px 10px #999;
+    border-bottom: 5px double var(--primary-color);
+    padding-bottom: .5rem;
+}
+
+/* Standard Code */
+
+body {
+    background: var(--secondary-color);
+    height: 500vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 1200px;
+}
+
+/* Navigation Bar */
+
+nav {
+    background: var(--primary-color);
+    opacity: .8;
+    width: 100%;
+    height: 5rem;
+}
+
+/* Block */
+
+.block {
+    display: flex;
+    flex-direction: column;
+    margin: 1.5rem 2rem;
+    width: auto;
+    border-radius: 20px;
+}
+
+.block__description {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 10px 10px 10px #777;
+    transition: scale .2s;
+}
+
+.block__description:hover {
+    scale: 1.05;
+}
+
+.name {
+    margin: 0;
+    text-align: center;
+    margin: 0 1.5rem;
+    padding: .5rem 0;
+    border-bottom: 1.5px solid #fff;
+    font-size: 1.5rem;
+}
+
+.picture-block {
+    display: flex;
+    margin: 1rem 1.5rem;
+    border-radius: 15px;
+    width: 13rem;
+    height: 13rem;
+    overflow: hidden;
+    align-items: center;
+    justify-self: center;
+    margin-bottom: 2rem;
+}
+
+.my-picture {
+    width: 100%;
+    height: 100%;
+}
+
+.text--block {
+    background: var(--accent-color);
+    opacity: .6;
+    border-radius: 20px;
+    display: flex;
+    align-self: center;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.text {
+    text-align: center;
+    line-height: 1.5rem;
+    margin: .5rem;
+    font-size: .8rem;
+}
+
+.text--select::selection {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Grid */
+
+.grid {
+    display: grid;
+}
+
+.grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
 }
