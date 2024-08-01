@@ -2,11 +2,13 @@
     --primary-color: #194680;
     --secondary-color: #d4e3f7;
     --accent-color: #ff3333;
+    --primary-text-color: #121010e1;
+    --secondary-text-color: #003366;
 }
 
 /* Typography */
 
-h1, h2, h3 {
+h1, h2, h3, p {
     color: #fff;
 }
 
@@ -22,6 +24,82 @@ h1, h2, h3 {
     border-bottom: 2px solid var(--primary-color);
     padding-bottom: .5rem;
 }
+
+/* Links */
+
+.link {
+    text-decoration: none;
+}
+
+.direct--link {
+    color: var(--accent-color);
+}
+
+
+/* Shapes */
+.parallelogram {
+    width: 10rem;
+	height: 4rem;
+	transform: skew(20deg);
+	background: #555;
+    border-radius: 10px;
+}
+
+.square {
+    height: 5rem;
+    width: 10rem;
+    background: #555;
+    border-radius: 10px;
+}
+
+.circle {
+    height: .4rem;
+    width: .4rem;
+    border-radius: 50%;
+    background: #999;
+}
+
+.square__laptop {
+    right: 7px;
+    top: 7px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square__ipad {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle__ipad {
+    position: absolute;
+    display: inline;
+    align-self: center;
+    left: 10.55rem;
+}
+
+.square__picture {
+    height: 3.5rem;
+    width: 9rem;
+}
+
+.ipad__picture {
+    height: 4.5rem;
+    display: inline;
+}
+
+.laptop {
+    margin: 1rem;
+}
+
+.ipad {
+    margin: 1rem;
+}
+
 
 /* Standard Code */
 
@@ -153,5 +231,86 @@ nav {
 }
 
 .grid--1x3 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+
+/* Card */
+
+.card {
+    background: var(--primary-color);
+    margin: 1rem;
+    width: 20rem;
+    height: auto;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.card:hover {
+    scale: 1.05;
+}
+
+.project--card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.information__container{
+    background: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.project__information {
+    text-align: center;
+    padding: .5rem;
+}
+
+.project--title {
+    font-weight: 600;
+    text-shadow: 2px 2px rgba(255, 51, 51, 0.3);
+}
+
+.project--description {
+    line-height: 1.5rem;
+}
+
+.project__information p, .list{
+    color: var(--primary-text-color);
+}
+
+.project__information h3 {
+    color: var(--secondary-text-color);
+}
+
+p.learn__title {
+    color: var(--secondary-text-color);
+}
+
+.learn__title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 2px 2px rgba(255, 51, 51, 0.3);
+}
+
+.list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.list--tick {
+    list-style-image: url(/images/tick.svg);
+    padding-left: 3rem;
+}
+
+.list__item {
+    text-align: left;
+    padding-bottom: .5rem;
+}
+
+.list--tick .list__item {
+    padding-left: 2rem;
+}
+
+/* Fix the link and scale the card. Try with ipad and laptop also. */
