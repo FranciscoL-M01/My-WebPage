@@ -32,74 +32,40 @@ h1, h2, h3, p {
 }
 
 .direct--link {
-    color: var(--accent-color);
+    color: var(--secondary-color);
+    font-size: .7rem;
+    font-weight: 500;
 }
 
-
-/* Shapes */
-.parallelogram {
-    width: 10rem;
-	height: 4rem;
-	transform: skew(20deg);
-	background: #555;
-    border-radius: 10px;
+@media screen and (min-width: 678px) {
+    .direct--link {
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }
 
-.square {
-    height: 5rem;
-    width: 10rem;
-    background: #555;
-    border-radius: 10px;
+/* Buttons */
+
+.button {
+    margin: 0;
+    height: auto;
+    width: auto;
+    padding: .2rem 1.5rem;
+    border-radius: 20px;
+
 }
 
-.circle {
-    height: .4rem;
-    width: .4rem;
-    border-radius: 50%;
-    background: #999;
+.direct--button {
+    background: var(--accent-color);
+    display: inline-block;
 }
 
-.square__laptop {
-    right: 7px;
-    top: 7px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media screen and (min-width: 678px) {
+    .button {
+        padding: .5rem 3.5rem;
+        margin: 1rem;
+    }
 }
-
-.square__ipad {
-    height: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.circle__ipad {
-    position: absolute;
-    display: inline;
-    align-self: center;
-    left: 10.55rem;
-}
-
-.square__picture {
-    height: 3.5rem;
-    width: 9rem;
-}
-
-.ipad__picture {
-    height: 4.5rem;
-    display: inline;
-}
-
-.laptop {
-    margin: 1rem;
-}
-
-.ipad {
-    margin: 1rem;
-}
-
 
 /* Standard Code */
 
@@ -161,9 +127,10 @@ nav {
     overflow: hidden;
 }
 
+/* Not really the best way of doing this */
 .my-picture {
-    width: 100%;
-    height: 100%;
+    width: 200px;
+    height: 200px;
 }
 
 .text--block {
@@ -205,6 +172,12 @@ nav {
         height: 13rem;
     }
 
+    /* May need adjustment */
+    .my-picture {
+        width: 100%;
+        height: 100%;
+    }
+
     .text--block {
         margin-right: 5rem;
     }
@@ -239,7 +212,7 @@ nav {
 .card {
     background: var(--primary-color);
     margin: 1rem;
-    width: 20rem;
+    width: 15rem;
     height: auto;
     border-radius: 20px;
     transition: .2s;
@@ -268,12 +241,19 @@ nav {
 }
 
 .project--title {
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 1rem;
     text-shadow: 2px 2px rgba(255, 51, 51, 0.3);
 }
 
+.icon .project--title {
+    position: absolute;
+}
+
 .project--description {
-    line-height: 1.5rem;
+    line-height: 1rem;
+    font-size: .7rem;
+    font-weight: 600;
 }
 
 .project__information p, .list{
@@ -289,7 +269,7 @@ p.learn__title {
 }
 
 .learn__title {
-    font-size: 1.1rem;
+    font-size: .9rem;
     font-weight: 500;
     text-shadow: 2px 2px rgba(255, 51, 51, 0.3);
 }
@@ -297,6 +277,8 @@ p.learn__title {
 .list {
     list-style: none;
     padding-left: 0;
+    font-size: .7rem;
+    font-weight: 500;
 }
 
 .list--tick {
@@ -313,4 +295,69 @@ p.learn__title {
     padding-left: 2rem;
 }
 
-/* Fix the link and scale the card. Try with ipad and laptop also. */
+
+/* Link for card */
+.direct--button:hover, .direct--link:hover {
+    background: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+@media screen and (min-width: 678px) {
+    .card {
+        width: 20rem;
+    }
+
+    .project--title {
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .project--description {
+        line-height: 1.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .learn__title {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .list {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+/* Icons */
+
+.icon {
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto;
+    padding: 0 .5rem;
+    column-gap: 2rem;
+    width: auto;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--secondary-color);
+    justify-self: flex-start;
+}
+
+@media screen and (min-width: 678px) {
+    .icon {
+        padding: 0 1rem;
+    }
+
+    .icon-container {
+        width: 40px;
+        height: 40px;
+    }
+}

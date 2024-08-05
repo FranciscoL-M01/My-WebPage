@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/6c017a3074.js"
+      crossorigin="anonymous"
+    ></script>
     <title>My WebPage</title>
     <link rel="stylesheet" href="styling/normalize.css" />
     <link rel="stylesheet" href="styling/style.css" />
@@ -16,7 +20,12 @@
         </div>
         <div class="information__container">
           <div class="project__information">
-            <h3 class="project--title">Project Title</h3>
+            <div class="icon grid grid--1x2">
+              <div class="icon-container">
+                <i class="fa-solid fa-laptop"></i>
+              </div>
+              <h3 class="project--title">Project Title</h3>
+            </div>
             <p class="project--description">
               Project description... Lorem, ipsum dolor sit amet consectetur
               adipisicing elit. Harum, dolorem!
@@ -27,7 +36,9 @@
               <li class="list__item">Another thing I learned</li>
               <li class="list__item">Last thing</li>
             </ul>
-            <a class="link direct--link" href="#">Learn More...</a>
+            <a class="link button direct--link direct--button" href="#"
+              >Learn More...</a
+            >
           </div>
         </div>
       </div>
