@@ -4,12 +4,13 @@
     --accent-color: #ff3333;
     --primary-text-color: #121010e1;
     --secondary-text-color: #003366;
+
 }
 
 /* Typography */
 
 h1, h2, h3, p {
-    color: #fff;
+    color: var(--primary-text-color);
 }
 
 .title {
@@ -25,6 +26,10 @@ h1, h2, h3, p {
     padding-bottom: .5rem;
 }
 
+.title--border {
+    border-bottom: 2px solid var(--primary-text-color);
+}
+
 /* Links */
 
 .link {
@@ -37,9 +42,32 @@ h1, h2, h3, p {
     font-weight: 500;
 }
 
+.download--link {
+    color: var(--secondary-text-color);
+}
+
+.download--link i {
+    margin-left: .5rem;
+}
+
+.top-link-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem;
+}
+
+.link .up-arrow {
+    margin: 0 .5rem;
+}
+
+.top-link {
+    color: var(--secondary-text-color);
+    font-weight: 500;
+}
+
 @media screen and (min-width: 678px) {
     .direct--link {
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: 400;
     }
 }
@@ -52,12 +80,17 @@ h1, h2, h3, p {
     width: auto;
     padding: .2rem 1.5rem;
     border-radius: 20px;
-
 }
 
 .direct--button {
     background: var(--accent-color);
     display: inline-block;
+}
+
+.btn--long {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media screen and (min-width: 678px) {
@@ -83,9 +116,114 @@ body {
 
 nav {
     background: var(--primary-color);
-    opacity: .8;
     width: 100%;
-    height: 5rem;
+    height: auto;
+}
+
+.navigation-bar {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+.logo-container {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.link-container {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5rem;
+}
+
+.nav--links {
+    color: #FFFFE0;
+}
+
+@media screen and (min-width: 678px) {
+
+    .logo-container {
+        margin-left: 2rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        justify-self: start;
+    }
+
+    .navigation-bar {
+        justify-items: center;
+        align-items: center;
+        padding: 1rem 0;
+    }
+
+    .link-container {
+        flex-direction: row;
+        justify-self: end;
+        margin-right: 1rem;
+    }
+
+    .link-container .nav--links {
+        margin: 0 1rem;
+    }
+}
+
+/* Footer */
+
+.block-footer {
+    background: var(--primary-color);
+    height: auto;
+    padding: .5rem;
+    text-align: center;
+}
+
+.contact-container {
+    font-size: .7rem;
+}
+
+.contact {
+    color: #FFFFE0;
+}
+
+.socials-container {
+    margin: 1rem 0;
+    gap: 1rem;
+    font-size: .8rem;
+}
+
+.socials {
+    color: var(--secondary-color);
+}
+
+.socials:hover {
+    color: var(--accent-color);
+}
+
+.social-icon {
+    margin: 0 .5rem;
+}
+
+.footer__title {
+    text-align: center;
+    margin: .5rem 0;
+    color: #FFEFD5;
+    text-shadow: 2px 2px var(--accent-color);
+}
+
+@media screen and (min-width: 678px) {
+    .contact-container, .socials-container {
+        font-size: .75rem;
+        font-weight: 500;
+    }
+
+    .socials-container {
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1224px) {
+    .contact-container, .socials-container {
+        font-size: 1rem;
+        font-weight: 400;
+    }
 }
 
 /* Block */
@@ -199,12 +337,14 @@ nav {
     justify-items: center;
 }
 
-.grid--1x2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid--1x3 {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+@media screen and (min-width: 920px) {
+    .grid--1x2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    
+    .grid--1x3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    } 
 }
 
 /* Card */
@@ -215,6 +355,8 @@ nav {
     width: 15rem;
     height: auto;
     border-radius: 20px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     transition: .2s;
 }
 
@@ -233,6 +375,7 @@ nav {
     background: #fff;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+    width: 100%;
 }
 
 .project__information {
@@ -254,10 +397,6 @@ nav {
     line-height: 1rem;
     font-size: .7rem;
     font-weight: 600;
-}
-
-.project__information p, .list{
-    color: var(--primary-text-color);
 }
 
 .project__information h3 {
@@ -359,5 +498,122 @@ p.learn__title {
     .icon-container {
         width: 40px;
         height: 40px;
+    }
+}
+
+/* Projects */
+
+.projects-block {
+    margin: 1rem auto;
+    padding: 1rem;
+    background: #FFEFD5;
+    border-radius: 20px;
+    width: 15rem;
+}
+
+.projects-title {
+    box-shadow: 0px 3px rgba(255, 51, 51, 0.3);
+    font-size: .7rem;
+    text-align: center;
+    text-shadow: 2px 2px rgba(255, 51, 51, 0.3);
+}
+
+.projects {
+    justify-content: center;
+    align-content: center;
+    height: auto;
+    width: auto;
+}
+
+.projects--text {
+    font-size: .6rem;
+    line-height: 1rem;
+    font-weight: 800;
+}
+
+.btn-projects {
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+}
+
+.download--container {
+    display: flex;
+    justify-content: flex-end;
+    font-size: .7rem;
+}
+
+@media screen and (min-width: 678px) {
+    .projects-block {
+        width: 600px;
+    }
+
+    .projects-title {
+        font-size: 1rem;
+    }
+
+    .projects--text {
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+    }
+
+    .download--container {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .download--link:hover {
+        color: var(--accent-color);
+    }
+
+    .projects {
+        align-items: center;
+        justify-items: center;
+    }
+}
+
+/* About Me Page */
+
+.about-me {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.about-me__title {
+    text-align: center;
+}
+
+.paragraph {
+    text-indent: 1rem;
+}
+
+.my-resume {
+    background: #FFEFD5;
+    padding: 1rem;
+    font-size: .8rem;
+}
+
+.resume__title {
+    font-size: .8rem;
+    text-align: center;
+}
+
+.resume__link {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media screen and (min-width: 678px) {
+    .about-me {
+        border-radius: 2px;
+        box-shadow: 10px 10px 10px grey;
+        margin: 1rem;
+    }
+
+    .my-resume {
+        border-radius: 20px;
+        width: 40rem;
+        margin: 2rem auto;
     }
 }
