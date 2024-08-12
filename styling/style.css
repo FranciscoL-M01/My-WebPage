@@ -15,19 +15,28 @@ h1, h2, h3, p {
 
 .title {
     text-align: center;
-    width: 100vw;
+    margin: 0 auto;
 }
 
 .page--title {
     margin: 1.5rem 5rem;
-    color: var(--primary-color);
+    color: var(--primary-text-color);
     text-shadow: 0px 0px 10px #999;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: .5rem;
+    font-size: 1.5rem;
+}
+
+.page--title {
+    font-family: Oswald, Arial, Helvetica, sans-serif;
 }
 
 .title--border {
     border-bottom: 2px solid var(--primary-text-color);
+}
+
+@media screen and (min-width: 678px) {
+    .page--title {
+        font-size: 3rem;
+    }
 }
 
 /* Links */
@@ -36,10 +45,18 @@ h1, h2, h3, p {
     text-decoration: none;
 }
 
+.link--container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
 .direct--link {
     color: var(--secondary-color);
-    font-size: .7rem;
+    font-size: 1rem;
     font-weight: 500;
+    text-align: center;
 }
 
 .download--link {
@@ -67,8 +84,12 @@ h1, h2, h3, p {
 
 @media screen and (min-width: 678px) {
     .direct--link {
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 400;
+    }
+
+    .link--container {
+        margin: auto;
     }
 }
 
@@ -88,15 +109,18 @@ h1, h2, h3, p {
 }
 
 .btn--long {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: auto;
 }
 
 @media screen and (min-width: 678px) {
     .button {
         padding: .5rem 3.5rem;
         margin: 1rem;
+    }
+
+    .btn--long {
+        width: 25rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -116,7 +140,7 @@ body {
 
 nav {
     background: var(--primary-color);
-    width: 100%;
+    width: 100vw;
     height: auto;
 }
 
@@ -230,8 +254,9 @@ nav {
 .block {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: 0 .5rem;
     width: auto;
+    border-radius: 10px;
 }
 
 .block__description {
@@ -283,7 +308,7 @@ nav {
     color: var(--primary-color);
 }
 
-@media screen and (min-width: 678px) {
+@media screen and (min-width: 924px) {
     .block {
         margin: 2rem auto;
         border-radius: 20px;
@@ -351,17 +376,12 @@ nav {
 
 .card {
     background: var(--primary-color);
-    margin: 1rem;
+    margin: 1rem auto;
     width: 15rem;
-    height: auto;
     border-radius: 20px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     transition: .2s;
-}
-
-.card:hover {
-    scale: 1.05;
 }
 
 .project--card {
@@ -504,18 +524,22 @@ p.learn__title {
 /* Projects */
 
 .projects-block {
-    margin: 1rem auto;
+    margin: 1rem .5rem;
     padding: 1rem;
     background: #FFEFD5;
     border-radius: 20px;
-    width: 15rem;
 }
 
 .projects-title {
-    box-shadow: 0px 3px rgba(255, 51, 51, 0.3);
+    border-bottom: var(--primary-text-color);
+    box-shadow: 0px 4px rgba(255, 51, 51, 0.3);
     font-size: .7rem;
     text-align: center;
     text-shadow: 2px 2px rgba(255, 51, 51, 0.3);
+}
+
+.block--title {
+    box-shadow: 0px 2px var(--primary-text-color);
 }
 
 .projects {
@@ -545,7 +569,8 @@ p.learn__title {
 
 @media screen and (min-width: 678px) {
     .projects-block {
-        width: 600px;
+        max-width: 60rem;
+        margin: 1rem;
     }
 
     .projects-title {
@@ -572,6 +597,14 @@ p.learn__title {
         justify-items: center;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    .projects-block {
+        max-width: 60rem;
+        margin: 1rem auto;
+    }
+}
+
 
 /* About Me Page */
 

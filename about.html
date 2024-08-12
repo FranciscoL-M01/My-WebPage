@@ -3,21 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/6c017a3074.js"
+      crossorigin="anonymous"
+    ></script>
     <title>My WebPage</title>
     <link rel="stylesheet" href="styling/normalize.css" />
     <link rel="stylesheet" href="styling/style.css" />
     <!--self closing eement-->
   </head>
   <body>
-    <header>
-      <div class="links">
-        <h2 class="link my-name">Francisco Lopez-Morelos</h2>
-        <a class="link" href="home.html">Home</a>
-        <a class="link" href="about.html">About Me</a>
+    <nav class="navigation-bar grid grid--1x2">
+      <div class="logo-container">
+        <a href="" class="link nav--links">Logo</a>
       </div>
-    </header>
-    <main id="homepage">
-      <div></div>
-    </main>
+      <div class="link-container">
+        <a href="/home.html" class="link nav--links collapsible--content"
+          >Home</a
+        >
+        <a href="/projects.html" class="link nav--links collapsible--content"
+          >Projects</a
+        >
+        <a href="/about.html" class="link nav--links collapsible--content"
+          >About Me</a
+        >
+      </div>
+    </nav>
+    <div class="title">
+      <h1 class="page--title">About Me</h1>
+    </div>
+    <div class="about-me">
+      <h2 class="about-me__title">More About Me...</h2>
+      <p class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ullam!
+      </p>
+      <p class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium
+        fugiat similique minima ut quis! Magnam veritatis assumenda pariatur
+        voluptate nulla?
+      </p>
+      <p class="paragraph">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi,
+        mollitia!
+      </p>
+    </div>
+    <div class="my-resume">
+      <h2 class="resume__title">
+        Here is a downloadable version of my resume my resume.
+      </h2>
+      <a class="link download--link resume__link" href=""
+        >Download Resume<i class="fa-solid fa-circle-down"></i
+      ></a>
+    </div>
+    <footer class="block-footer">
+      <h2 class="footer__title">Contacts</h2>
+      <div class="grid grid--1x2 grid__footer">
+        <div class="grid grid--1x2 grid__footer contact-container">
+          <p class="contact">Email: franciscolopezmorelos@gmail.com</p>
+          <p class="contact">Phone Number: 562-481-4718</p>
+        </div>
+        <div class="grid grid--1x2 grid__footer socials-container">
+          <a href="" class="link socials"
+            >LinkedIn<i class="fa-brands fa-linkedin social-icon"></i
+          ></a>
+          <a href="" class="link socials"
+            >Twitter<i class="fa-brands fa-square-x-twitter social-icon"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
