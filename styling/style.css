@@ -33,6 +33,10 @@ h1, h2, h3, p {
     border-bottom: 2px solid var(--primary-text-color);
 }
 
+.download-txt {
+    text-align: center;
+}
+
 @media screen and (min-width: 678px) {
     .page--title {
         font-size: 3rem;
@@ -327,7 +331,7 @@ nav {
 
     .picture-block {
         width: 18rem;
-        height: 13rem;
+        height: 18rem;
         margin: 1rem 1.5rem;
     }
 
@@ -335,6 +339,10 @@ nav {
     .my-picture {
         width: 100%;
         height: 100%;
+    }
+
+    .profile-picture {
+        border-radius: 50%;
     }
 
     .text__description {
@@ -641,7 +649,8 @@ p.learn__title {
     .about-me {
         border-radius: 2px;
         box-shadow: 10px 10px 10px grey;
-        margin: 1rem;
+        margin: 1rem auto;
+        width: 70rem;
     }
 
     .my-resume {
