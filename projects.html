@@ -22,54 +22,55 @@
 
     <nav class="navigation-bar grid grid--1x2 nav-collapsible">
       <div class="logo-container nav-title">
-        <a href="/assets/pages/home.html" class="link nav--links">Francisco</a>
+        <a href="https://franciscol-m01.github.io/My-WebPage/home.html" class="link nav--links">Francisco</a>
         <i class="fa-solid fa-circle-right hidden-content"></i>
       </div>
       <div class="link-container">
           <ul class="link-expand">
             <li class = "nav__item">
-                <a href="/assets/pages/home.html" class="link nav--links collapsible--content"
+                <a href="https://franciscol-m01.github.io/My-WebPage/home.html" class="link nav--links collapsible--content"
                   >Home</a
                 >
             </li>
             <li class= "nav__item">
-                <a href="/assets/pages/projects.html" class="link nav--links collapsible--content"
+                <a href="https://franciscol-m01.github.io/My-WebPage/projects.html" class="link nav--links collapsible--content"
                   >Projects</a
                 >
             </li>
             <li class="nav__item">
-                <a href="/assets/pages/about.html" class="link nav--links collapsible--content"
+                <a href="https://franciscol-m01.github.io/My-WebPage/about.html" class="link nav--links collapsible--content"
                   >About Me</a
                 >
             </li>
               </ul>
       </div>
     </nav>
-
-    <div class="block block__description block-skewed-left">
-        <div class="grid grid--1x2">
-            <div class="grid grid__block">
-                <div class="picture-block profile-picture">
-                    <img class="my-picture" src="assets/images/profile-pic.jpeg" alt="" />
-                </div>
-                <h2 class="name__block">Francisco Lopez-Morelos</h2>
-            </div>
-            <div class="text--block">
-              <p class="text__description text--select">
-                "I strive to always learn and improve to become a better version of
-                myself. My interest in coding lies in front-end web development and
-                mobile app development. I like the idea of designing my own project
-                and putting it together for a polished final product."
+    
+    <div class="projects-title">
+      <h2>Learn More About This Website...</h2>
+    </div>
+    
+    <div class="pdf--container">
+      <object data="assets/pdfs/My Personal Website Documentation.pdf" type="" class="pdf">
+        <a href="assets/pdfs/My Personal Website Documentation.pdf" target="_blank" class="link">
+          <div class="projects-web-block">
+            <div class="grid error-block">
+              <div class="error-icon"><i class="fa-solid fa-triangle-exclamation error"></i></div>
+              <p class="web-txt">
+                Unfortunately, your browser can’t embed the PDF. Click Here to Look at the PDF!
               </p>
             </div>
-        </div>
+          </div>
+        </a>
+      </object>
     </div>
 
     <div class="projects-block">
-        <div class="projects-title">
-          <h2>Recent Projects...</h2>
-        </div>
-        <div class="grid grid--1x3-tablet">
+      <div class="projects-title">
+        <h2>Projects</h2>
+      </div>
+      <div class="grid grid--1x3-tablet">
+        <a href="assets/pdfs/LocalLink Project Documentation.pdf" target="_blank" class="link link--pdf">
           <div class="card">
             <div class="project--card grid grid--1x2">
               <div class="picture-block">
@@ -87,6 +88,11 @@
                     </div>
                     <h3 class="project--title">LocalLink</h3>
                   </div>
+                  <p class="project--description">
+                    This is a local services webstie made to help employers look
+                    for workers. Workers must present themselves and their skills
+                    for employeers to see.
+                  </p>
                   <h3 class="learn__title">What I learned...</h3>
                   <ul class="list list--tick">
                     <li class="list__item">How to layout a website.</li>
@@ -97,7 +103,36 @@
               </div>
             </div>
           </div>
-          <div class="card">
+        </a>
+        <div class="card">
+          <div class="project--card grid grid--1x2">
+            <div class="picture-block">
+              <img class="my-picture" src="assets/images/pfp.webp" alt="" />
+            </div>
+            <div class="information__container">
+              <div class="project__information">
+                <div class="icon grid grid--1x2">
+                  <div class="icon-container">
+                    <i class="fa-solid fa-laptop"></i>
+                  </div>
+                  <h3 class="project--title">Project Title</h3>
+                </div>
+                <p class="project--description">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+                  provident, incidunt veritatis voluptatibus ea autem. Commodi
+                  voluptate odit delectus molestias!
+                </p>
+                <h3 class="learn__title">What I learned...</h3>
+                <ul class="list list--tick">
+                  <li class="list__item">One thing I learned</li>
+                  <li class="list__item">Another thing I learned</li>
+                  <li class="list__item">Last thing</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
             <div class="project--card grid grid--1x2">
               <div class="picture-block">
                 <img class="my-picture" src="assets/images/pfp.webp" alt="" />
@@ -110,6 +145,11 @@
                     </div>
                     <h3 class="project--title">Project Title</h3>
                   </div>
+                  <p class="project--description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+                    provident, incidunt veritatis voluptatibus ea autem. Commodi
+                    voluptate odit delectus molestias!
+                  </p>
                   <h3 class="learn__title">What I learned...</h3>
                   <ul class="list list--tick">
                     <li class="list__item">One thing I learned</li>
@@ -119,39 +159,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="card">
-              <div class="project--card grid grid--1x2">
-                <div class="picture-block">
-                  <img class="my-picture" src="assets/images/pfp.webp" alt="" />
-                </div>
-                <div class="information__container">
-                  <div class="project__information">
-                    <div class="icon grid grid--1x2">
-                      <div class="icon-container">
-                        <i class="fa-solid fa-laptop"></i>
-                      </div>
-                      <h3 class="project--title">Project Title</h3>
-                    </div>
-                    <h3 class="learn__title">What I learned...</h3>
-                    <ul class="list list--tick">
-                      <li class="list__item">One thing I learned</li>
-                      <li class="list__item">Another thing I learned</li>
-                      <li class="list__item">Last thing</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-          </div>
         </div>
-        <div class="link--container">
-          <a
-            class="link button direct--link direct--button btn--long"
-            href="/assets/pages/projects.html"
-            >View More Projects...</a
-          >
-        </div>
-    </div>
+      </div>
+  </div>
 
     <footer class="block-footer">
         <h2 class="footer__title">Contacts</h2>
@@ -175,4 +185,3 @@
     <script src="index.js"></script>
   </body>
 </html>
- 
