@@ -16,121 +16,147 @@
     <title>My WebPage</title>
     <link rel="stylesheet" href="styling/normalize.css" />
     <link rel="stylesheet" href="styling/style.css" />
-    <!--self closing eement-->
+    <!--self closing element-->
   </head>
   <body>
-    <nav class="navigation-bar grid grid--1x2">
-      <div class="logo-container">
-        <a href="#" class="link nav--links">Francisco</a>
+
+    <nav class="navigation-bar grid grid--1x2 nav-collapsible">
+      <div class="logo-container nav-title">
+        <a href="/home.html" class="link nav--links">Francisco</a>
+        <i class="fa-solid fa-circle-right hidden-content"></i>
       </div>
       <div class="link-container">
-        <a href="/home.html" class="link nav--links collapsible--content"
-          >Home</a
-        >
-        <a href="/projects.html" class="link nav--links collapsible--content"
-          >Projects</a
-        >
-        <a href="/about.html" class="link nav--links collapsible--content"
-          >About Me</a
-        >
+          <ul class="link-expand">
+            <li class = "nav__item">
+                <a href="/home.html" class="link nav--links collapsible--content"
+                  >Home</a
+                >
+            </li>
+            <li class= "nav__item">
+                <a href="/projects.html" class="link nav--links collapsible--content"
+                  >Projects</a
+                >
+            </li>
+            <li class="nav__item">
+                <a href="/about.html" class="link nav--links collapsible--content"
+                  >About Me</a
+                >
+            </li>
+              </ul>
       </div>
     </nav>
-    <div class="title">
-      <h1 class="page--title">Home Page</h1>
-    </div>
-    <div class="block block__description">
-      <h2 class="name__block">Francisco Lopez-Morelos</h2>
-      <div class="grid grid--1x2 grid__block">
-        <div class="picture-block profile-picture">
-          <img class="my-picture" src="/images/profile-pic.jpeg" alt="" />
+
+    <div class="block block__description block-skewed-left">
+        <div class="grid grid--1x2">
+            <div class="grid grid__block">
+                <div class="picture-block profile-picture">
+                    <img class="my-picture" src="/images/profile-pic.jpeg" alt="" />
+                </div>
+                <h2 class="name__block">Francisco Lopez-Morelos</h2>
+            </div>
+            <div class="text--block">
+              <p class="text__description text--select">
+                "I strive to always learn and improve to become a better version of
+                myself. My interest in coding lies in front-end web development and
+                mobile app development. I like the idea of designing my own project
+                and putting it together for a polished final product."
+              </p>
+            </div>
         </div>
-        <div class="text--block">
-          <p class="text__description text--select">
-            I strive to always learn and improve to become a better version of
-            myself. My interest in coding lies in front-end web development and
-            mobile app development. I like the idea of designing my own project
-            and putting it together for a polished final product.
-          </p>
-        </div>
-      </div>
     </div>
+
     <div class="projects-block">
-      <div class="projects-title">
-        <h2 class="block--title">Projects</h2>
-      </div>
-      <div class="grid grid--1x2">
-        <div class="card">
-          <div class="project--card grid grid--1x2">
-            <div class="picture-block">
-              <img
-                class="my-picture"
-                src="/images/LocalLink-Project.png"
-                alt=""
-              />
-            </div>
-            <div class="information__container">
-              <div class="project__information">
-                <div class="icon grid grid--1x2">
-                  <div class="icon-container">
-                    <i class="fa-solid fa-laptop"></i>
+        <div class="projects-title">
+          <h2>Recent Projects...</h2>
+        </div>
+        <div class="grid grid--1x3-tablet">
+          <div class="card">
+            <div class="project--card grid grid--1x2">
+              <div class="picture-block">
+                <img
+                  class="my-picture"
+                  src="/images/LocalLink-Project.png"
+                  alt=""
+                />
+              </div>
+              <div class="information__container">
+                <div class="project__information">
+                  <div class="icon grid grid--1x2">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3 class="project--title">LocalLink</h3>
                   </div>
-                  <h3 class="project--title">LocalLink</h3>
+                  <h3 class="learn__title">What I learned...</h3>
+                  <ul class="list list--tick">
+                    <li class="list__item">How to layout a website.</li>
+                    <li class="list__item">Create components.</li>
+                    <li class="list__item">Importance of styling.</li>
+                  </ul>
                 </div>
-                <h3 class="learn__title">What I learned...</h3>
-                <ul class="list list--tick">
-                  <li class="list__item">How to layout a website.</li>
-                  <li class="list__item">Create simple components.</li>
-                  <li class="list__item">Importance of styling.</li>
-                </ul>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card">
-          <div class="project--card grid grid--1x2">
-            <div class="picture-block">
-              <img class="my-picture" src="/images/pfp.webp" alt="" />
-            </div>
-            <div class="information__container">
-              <div class="project__information">
-                <div class="icon grid grid--1x2">
-                  <div class="icon-container">
-                    <i class="fa-solid fa-laptop"></i>
+          <div class="card">
+            <div class="project--card grid grid--1x2">
+              <div class="picture-block">
+                <img class="my-picture" src="/images/pfp.webp" alt="" />
+              </div>
+              <div class="information__container">
+                <div class="project__information">
+                  <div class="icon grid grid--1x2">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3 class="project--title">Project Title</h3>
                   </div>
-                  <h3 class="project--title">Project Title</h3>
+                  <h3 class="learn__title">What I learned...</h3>
+                  <ul class="list list--tick">
+                    <li class="list__item">One thing I learned</li>
+                    <li class="list__item">Another thing I learned</li>
+                    <li class="list__item">Last thing</li>
+                  </ul>
                 </div>
-                <h3 class="learn__title">What I learned...</h3>
-                <ul class="list list--tick">
-                  <li class="list__item">One thing I learned</li>
-                  <li class="list__item">Another thing I learned</li>
-                  <li class="list__item">Last thing</li>
-                </ul>
               </div>
             </div>
           </div>
+          <div class="card">
+              <div class="project--card grid grid--1x2">
+                <div class="picture-block">
+                  <img class="my-picture" src="/images/pfp.webp" alt="" />
+                </div>
+                <div class="information__container">
+                  <div class="project__information">
+                    <div class="icon grid grid--1x2">
+                      <div class="icon-container">
+                        <i class="fa-solid fa-laptop"></i>
+                      </div>
+                      <h3 class="project--title">Project Title</h3>
+                    </div>
+                    <h3 class="learn__title">What I learned...</h3>
+                    <ul class="list list--tick">
+                      <li class="list__item">One thing I learned</li>
+                      <li class="list__item">Another thing I learned</li>
+                      <li class="list__item">Last thing</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
-      </div>
-      <div class="link--container">
-        <a
-          class="link button direct--link direct--button btn--long"
-          href="/projects.html"
-          >View More Projects...</a
-        >
-      </div>
+        <div class="link--container">
+          <a
+            class="link button direct--link direct--button btn--long"
+            href="/projects.html"
+            >View More Projects...</a
+          >
+        </div>
     </div>
-    <div class="top-link-container">
-      <a class="link top-link" href="#"
-        >Back to The Top<i class="fa-solid fa-circle-arrow-up up-arrow"></i
-      ></a>
-    </div>
+
     <footer class="block-footer">
-      <h2 class="footer__title">Contacts</h2>
-      <div class="grid grid--1x2 grid__footer">
-        <div class="grid grid--1x2 grid__footer contact-container">
-          <p class="contact">Email: franciscolopezmorelos@gmail.com</p>
-          <p class="contact">Phone Number: 562-481-4718</p>
-        </div>
-        <div class="grid grid--1x2 grid__footer socials-container">
+        <h2 class="footer__title">Contacts</h2>
+        <div class="grid grid--1x3 contact-container">
+          <p class="contact">franciscolopezmorelos@gmail.com</p>
           <a
             href="https://linkedin.com/in/francisco-lopez-morelos-268ab6292"
             target="_blank"
@@ -144,7 +170,9 @@
             >Twitter<i class="fa-brands fa-square-x-twitter social-icon"></i
           ></a>
         </div>
-      </div>
-    </footer>
+      </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
+ 

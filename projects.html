@@ -16,98 +16,94 @@
     <title>My WebPage</title>
     <link rel="stylesheet" href="styling/normalize.css" />
     <link rel="stylesheet" href="styling/style.css" />
-    <!--self closing eement-->
+    <!--self closing element-->
   </head>
   <body>
-    <nav class="navigation-bar grid grid--1x2">
-      <div class="logo-container">
+
+    <nav class="navigation-bar grid grid--1x2 nav-collapsible">
+      <div class="logo-container nav-title">
         <a href="/home.html" class="link nav--links">Francisco</a>
+        <i class="fa-solid fa-circle-right hidden-content"></i>
       </div>
       <div class="link-container">
-        <a href="/home.html" class="link nav--links collapsible--content"
-          >Home</a
-        >
-        <a href="/projects.html" class="link nav--links collapsible--content"
-          >Projects</a
-        >
-        <a href="/about.html" class="link nav--links collapsible--content"
-          >About Me</a
-        >
+          <ul class="link-expand">
+            <li class = "nav__item">
+                <a href="/home.html" class="link nav--links collapsible--content"
+                  >Home</a
+                >
+            </li>
+            <li class= "nav__item">
+                <a href="/projects.html" class="link nav--links collapsible--content"
+                  >Projects</a
+                >
+            </li>
+            <li class="nav__item">
+                <a href="/about.html" class="link nav--links collapsible--content"
+                  >About Me</a
+                >
+            </li>
+              </ul>
       </div>
     </nav>
-    <div class="title">
-      <h1 class="page--title">Projects</h1>
+    
+    <div class="projects-title">
+      <h2>Learn More About This Website...</h2>
     </div>
-    <div class="projects-block">
-      <div class="projects-title">
-        <div class="title--border">
-          <h2>How I Built This Website...</h2>
-        </div>
-      </div>
-      <div class="projects--text">
-        <p>
-          My goal in creating this website is to have it as a form of
-          introduction for me where it will display information about who I am
-          as well as some of my projects. This website is a work in progress and
-          I'm always adding as I learn.
-        </p>
-        <p class="download-txt">
-          Feel Free to download a PDF of a document explaing everything more in
-          depth.
-        </p>
-      </div>
-      <div class="download--container">
-        <a
-          class="link download--link"
-          href="/downloads/My Personal Website Documentation.pdf"
-          download
-          >Download<i class="fa-solid fa-circle-down"></i
-        ></a>
-      </div>
-    </div>
-    <div class="projects-block">
-      <div class="projects-title">
-        <h2 class="block--title">Projects</h2>
-      </div>
-      <div class="grid grid--1x2">
-        <div class="card">
-          <div class="project--card grid grid--1x2">
-            <div class="picture-block">
-              <img
-                class="my-picture"
-                src="/images/LocalLink-Project.png"
-                alt=""
-              />
+    
+    <div class="pdf--container">
+      <object data="/pdfs/My Personal Website Documentation.pdf" type="" class="pdf">
+        <a href="pdfs/My Personal Website Documentation.pdf" target="_blank" class="link">
+          <div class="projects-web-block">
+            <div class="grid error-block">
+              <div class="error-icon"><i class="fa-solid fa-triangle-exclamation error"></i></div>
+              <p class="web-txt">
+                Unfortunately, your browser can’t embed the PDF. Click Here to Look at the PDF!
+              </p>
             </div>
-            <div class="information__container">
-              <div class="project__information">
-                <div class="icon grid grid--1x2">
-                  <div class="icon-container">
-                    <i class="fa-solid fa-laptop"></i>
+          </div>
+        </a>
+      </object>
+    </div>
+
+    <div class="projects-block">
+      <div class="projects-title">
+        <h2>Projects</h2>
+      </div>
+      <div class="grid grid--1x3-tablet">
+        <a href="pdfs/LocalLink Project Documentation.pdf" target="_blank" class="link link--pdf">
+          <div class="card">
+            <div class="project--card grid grid--1x2">
+              <div class="picture-block">
+                <img
+                  class="my-picture"
+                  src="/images/LocalLink-Project.png"
+                  alt=""
+                />
+              </div>
+              <div class="information__container">
+                <div class="project__information">
+                  <div class="icon grid grid--1x2">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3 class="project--title">LocalLink</h3>
                   </div>
-                  <h3 class="project--title">LocalLink</h3>
+                  <p class="project--description">
+                    This is a local services webstie made to help employers look
+                    for workers. Workers must present themselves and their skills
+                    for employeers to see.
+                  </p>
+                  <h3 class="learn__title">What I learned...</h3>
+                  <ul class="list list--tick">
+                    <li class="list__item">How to layout a website.</li>
+                    <li class="list__item">Create components.</li>
+                    <li class="list__item">Importance of styling.</li>
+                  </ul>
                 </div>
-                <p class="project--description">
-                  This is a local services webstie made to help employers look
-                  for workers. Workers must present themselves and their skills
-                  for employeers to see.
-                </p>
-                <h3 class="learn__title">What I learned...</h3>
-                <ul class="list list--tick">
-                  <li class="list__item">How to layout a website.</li>
-                  <li class="list__item">Create simple components.</li>
-                  <li class="list__item">Importance of styling.</li>
-                </ul>
-                <a
-                  class="link button direct--link direct--button"
-                  href="/downloads/LocalLink Project Documentation.pdf"
-                  download
-                  >Learn More...</a
-                >
               </div>
             </div>
           </div>
-        </div>
+        </a>
         <div class="card">
           <div class="project--card grid grid--1x2">
             <div class="picture-block">
@@ -132,28 +128,45 @@
                   <li class="list__item">Another thing I learned</li>
                   <li class="list__item">Last thing</li>
                 </ul>
-                <a class="link button direct--link direct--button" href="#"
-                  >Learn More...</a
-                >
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="top-link-container">
-      <a class="link top-link" href="#"
-        >Back to The Top<i class="fa-solid fa-circle-arrow-up up-arrow"></i
-      ></a>
-    </div>
-    <footer class="block-footer">
-      <h2 class="footer__title">Contacts</h2>
-      <div class="grid grid--1x2 grid__footer">
-        <div class="grid grid--1x2 grid__footer contact-container">
-          <p class="contact">Email: franciscolopezmorelos@gmail.com</p>
-          <p class="contact">Phone Number: 562-481-4718</p>
+        <div class="card">
+            <div class="project--card grid grid--1x2">
+              <div class="picture-block">
+                <img class="my-picture" src="/images/pfp.webp" alt="" />
+              </div>
+              <div class="information__container">
+                <div class="project__information">
+                  <div class="icon grid grid--1x2">
+                    <div class="icon-container">
+                      <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3 class="project--title">Project Title</h3>
+                  </div>
+                  <p class="project--description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel
+                    provident, incidunt veritatis voluptatibus ea autem. Commodi
+                    voluptate odit delectus molestias!
+                  </p>
+                  <h3 class="learn__title">What I learned...</h3>
+                  <ul class="list list--tick">
+                    <li class="list__item">One thing I learned</li>
+                    <li class="list__item">Another thing I learned</li>
+                    <li class="list__item">Last thing</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
         </div>
-        <div class="grid grid--1x2 grid__footer socials-container">
+      </div>
+  </div>
+
+    <footer class="block-footer">
+        <h2 class="footer__title">Contacts</h2>
+        <div class="grid grid--1x3 contact-container">
+          <p class="contact">franciscolopezmorelos@gmail.com</p>
           <a
             href="https://linkedin.com/in/francisco-lopez-morelos-268ab6292"
             target="_blank"
@@ -167,7 +180,8 @@
             >Twitter<i class="fa-brands fa-square-x-twitter social-icon"></i
           ></a>
         </div>
-      </div>
-    </footer>
+      </footer>
+
+    <script src="index.js"></script>
   </body>
 </html>
